@@ -15,5 +15,4 @@ Mitt Api handlar om att man ska kunna se olika skämt baserat på kategorier fr�
   -Starta dev-servern
 
 - Användning:
-  För att få ett nytt skämt så måste man uppdatera sidan så
-  uppdateras skämten.
+  För att få ett nytt skämt så kan man använda klickfunktionen på rubriken för skämt och även välja ifrån dropdownen.
