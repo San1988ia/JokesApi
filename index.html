@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JokesApi</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!--kopplar till min css fil-->
+  </head>
+  <body>
+    <!--Container för skämten-->
+    <div class="container">
+      <header>
+        <h1>🤡Slumpmässiga skämt🤡</h1>
+        <p>Hitta roliga skämt</p>
+      </header>
+
+      <!-- rubrik för programmeringsskämt -->
+      <div id="programming-joke-header" class="joke-header">
+        Programmeringsskämt
+      </div>
+      <div id="programming-joke-container"></div>
+
+      <!--rubrik för slumpmässigt skämt-->
+      <div id="random-joke-header" class="joke-header">Slumpmässiga skämt</div>
+      <div id="random-joke-container"></div>
+
+      <!--rubrik för skämttyper-->
+      <div id="joke-types-header" class="joke-header">Skämttyper</div>
+      <div id="joke-types-container"></div>
+    </div>
+
+    <!--Min dropdown-->
+    <select id="joke-type-dropdown">
+      <option value="programming">Programmering</option>
+      <option value="random">Slumpmässiga</option>
+    </select>
+    <div id="joke-container"></div>
+
+    <footer>
+      <p>&copy; Av Sania</p>
+    </footer>
+
+    <!-- Include the TypeScript entry file -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

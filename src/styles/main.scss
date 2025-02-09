@@ -1,0 +1,9 @@
+@import "./variables";
+@import "./mixins";
+
+.joke-card {
+  @include card-style($primary-color);
+  h3 {
+    color: $font-color;
+  }
+}

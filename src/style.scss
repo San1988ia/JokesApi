@@ -1,0 +1,204 @@
+// @use "./styles/mixin";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+//Grundinställningar för container
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: rgb(151, 39, 39);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(205, 134, 134, 0.1);
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+//Rubriker
+h2 {
+  font-size: 2rem;
+  color: rgb(6, 6, 6);
+  margin-bottom: 1rem;
+}
+
+//Styla klickbara rubriker (kort)
+.joke-header {
+  background-color: #77e4b9;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.joke-header:hover {
+  transform: translateY(-5px);
+  background-color: #07492a;
+}
+
+//Styla skämtkort (de som visas när man klickar på korten)
+.joke-card {
+  background-color: #084a2f;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-top: 1rem;
+}
+
+.joke-card:hover {
+  transform: translateY(-5px);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+//Flexbox för att ordna sektioner snyggt
+.random-programming-joke,
+.joke-types,
+.random-joke {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+//Specifik bakgrundsfärg för varje sektion
+.random-programming-joke {
+  background-color: #3c3c96;
+}
+
+.joke-types {
+  background-color: #b35c5c;
+}
+
+.random-joke {
+  background-color: #52c2de;
+}
+
+//För stora skärmar(desktop)
+@media (min-width: 1024px) {
+  .container {
+    max-width: 900px; //justera storleken för desktop
+    padding: 2rem;
+  }
+
+  .joke-card {
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+
+  .random-programming-joke,
+  .joke-types,
+  .random-joke {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .joke-header {
+    font-size: 1.5rem;
+  }
+}
+
+//för mindre skärmar (tablet eller större mobil)
+@media (max-width: 1024px) {
+  .container {
+    max-width: 750px;
+    padding: 1.5rem;
+  }
+  .joke-card {
+    padding: 1.5rem;
+  }
+
+  .random-programming-joke,
+  .joke-types,
+  .random-joke {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .joke-header {
+    font-size: 1.2rem;
+  }
+}
+
+//för små skärmar (mobil)
+@media (max-width: 600px) {
+  .container {
+    width: 100%; //full bredd på mobil
+    padding: 1rem;
+  }
+  .joke-card {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  .joke-header {
+    font-size: 1rem; //justera text storleken för mindre skärmar
+  }
+
+  .random-programming-joke,
+  .joke-types,
+  .random-joke {
+    flex-direction: column; //se till så allt är staplat på mobil
+    align-items: center;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(223, 128, 128);
+  color: #52c2de;
+  text-align: center;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  p {
+    margin: 0;
+  }
+}
+//för små skärmar (mobil)
+@media (max-width: 600px) {
+  footer {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+  .container {
+    padding: 1rem;
+  }
+  .joke-header {
+    font-size: 1rem;
+  }
+}
+
+//för tablet och större skärmar
+@media (min-width: 600px) {
+  footer {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .container {
+    max-width: 750px;
+  }
+}
