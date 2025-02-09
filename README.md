@@ -1,6 +1,6 @@
 # JokesApi
 
-<!-- Mitt Api handlar om att man ska kunna se olika skämt baserat på kategorier från endpoints.
+Mitt Api handlar om att man ska kunna se olika skämt baserat på kategorier från endpoints.
 
 - Kloning av projektet:
   git clone https://github.com/San1988ia/JokesApi.git
@@ -16,4 +16,4 @@
 
 - Användning:
   För att få ett nytt skämt så måste man uppdatera sidan så
-  uppdateras skämten. -->
+  uppdateras skämten.
